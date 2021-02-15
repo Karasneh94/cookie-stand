@@ -160,15 +160,15 @@ for(let i =0 ; i<shops.length;i++){
 
     unorderedList.appendChild(listItem);
 
-    listItem.textContent= shops[i].workHours[j] + ' : ' + shops[i].avrCookies[j] + ' Cookies' ;
+    listItem.textContent= shops[i].workHours[j] + ' : ' + Math.round(shops[i].avrCookies[j]) + ' Cookies' ;
 
 
   }
 
 
-  let total = document.createElement('h3');
-  sales.appendChild(total);
-  total.textContent= shops[i].cookiesTotal + ' : Cookies';
+  let total = document.createElement('li');
+  unorderedList.appendChild(total);
+  total.textContent= 'Total : ' + Math.round(shops[i].cookiesTotal) + ' : Cookies';
 
 
 
